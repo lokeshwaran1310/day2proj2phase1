@@ -140,4 +140,4 @@ target/
 *.war
 *.log
 *.tmp
-.DS_Store"PP
+.DS_Store"
