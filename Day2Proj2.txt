@@ -1,0 +1,143 @@
+Project Structure
+-----------------
+
+day2proj2phase1/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── day2proj2phase1/
+│   │               ├── App.java
+│   │               ├── User.java
+│   │               └── Ticket.java
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── day2proj2phase1/
+│                   └── AppTest.java
+│
+├── pom.xml
+├── README.md
+
+
+App.java
+--------
+
+package com.day2proj2phase1;
+public class App 
+{
+    public static void main( String[] args )
+    {
+        User u1=new User(101,"Lokesh","lokesh@gmail.com");
+        User u2=new User(102,"Hari","hari@gmail.com");
+        Ticket t1=new Ticket(1,"issue 1","i have an issue in X",u1);
+         Ticket t2=new Ticket(2,"issue 2","i have an issue in Y",u2);
+         Ticket t3=new Ticket(3,"issue 3","i have an issue in z",u2);
+         t1.closetic();
+         t1.ticketdisplay();
+         t2.ticketdisplay();
+          t3.closetic();
+         t3.ticketdisplay();
+
+
+    }
+}
+
+
+Ticket.java
+-----------
+
+package com.day2proj2phase1;
+
+public class Ticket {
+    private int tickid;
+    private String title;
+    private String desc;
+    private String status;
+    private User user;
+    public Ticket(int ticid,String title,String desc,User user){
+        this.tickid=ticid;
+        this.title=title;
+        this.desc=desc;
+        this.status="open";
+        this.user=user;
+    }
+
+    public int getTickid() {
+        return tickid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+    public void ticketdisplay(){
+        System.out.println("TICKET INFORMATION");
+        System.out.println("Ticket ID:"+this.tickid+"\n"+"Ticket Title:"+this.title+"\n"+"Ticket Description:"+this.desc+"\n"+"Ticket Status:"+this.status+"\n");
+        user.userdisplay();
+    }
+    public void closetic(){
+        this.status="Closed";
+        }
+}
+
+
+User.java
+---------
+
+package com.day2proj2phase1;
+
+public class User {
+    private int userid;
+    private String username;
+    private String emailid;
+    public User(int userid,String username,String emailid){
+        this.userid=userid;
+        this.username=username;
+        this.emailid=emailid;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmailid() {
+        return emailid;
+    }
+   public void userdisplay(){
+    System.out.println("ASSOCIATE USER INFORMATION");
+    System.out.println("User ID: "+this.userid+"\n"+"Username: "+this.username+"\n"+"Emailid: "+this.emailid+"\n");
+
+   }
+
+}
+
+
+.gitignore
+----------
+
+echo ".idea/
+target/
+*.iml
+*.class
+*.jar
+*.war
+*.log
+*.tmp
+.DS_Store"PP
