@@ -141,3 +141,39 @@ target/
 *.log
 *.tmp
 .DS_Store"
+
+Output
+------
+
+TICKET INFORMATION
+Ticket ID:1
+Ticket Title:issue 1
+Ticket Description:i have an issue in X
+Ticket Status:Closed
+
+ASSOCIATE USER INFORMATION
+User ID: 101
+Username: Lokesh
+Emailid: lokesh@gmail.com
+
+TICKET INFORMATION
+Ticket ID:2
+Ticket Title:issue 2
+Ticket Description:i have an issue in Y
+Ticket Status:open
+
+ASSOCIATE USER INFORMATION
+User ID: 102
+Username: Hari
+Emailid: hari@gmail.com
+
+TICKET INFORMATION
+Ticket ID:3
+Ticket Title:issue 3
+Ticket Description:i have an issue in z
+Ticket Status:Closed
+
+ASSOCIATE USER INFORMATION
+User ID: 102
+Username: Hari
+Emailid: hari@gmail.com
